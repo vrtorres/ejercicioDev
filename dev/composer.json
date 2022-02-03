@@ -1,0 +1,10 @@
+{
+    "autoload":{
+      "psr-4":{
+          "Andromeda\\":"app/"
+      }
+    },
+    "require": {
+        "opis/database": "^4.2"
+    }
+}
