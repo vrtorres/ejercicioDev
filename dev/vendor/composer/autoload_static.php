@@ -13,7 +13,7 @@ class ComposerStaticInitc0b76f5feeba9fe88d24fb6631d37b5c
         ),
         'A' => 
         array (
-            'Andromeda\\' => 10,
+            'App\\' => 4,
         ),
     );
 
@@ -22,9 +22,9 @@ class ComposerStaticInitc0b76f5feeba9fe88d24fb6631d37b5c
         array (
             0 => __DIR__ . '/..' . '/opis/database/src',
         ),
-        'Andromeda\\' => 
+        'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

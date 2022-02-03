@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Opis\\Database\\' => array($vendorDir . '/opis/database/src'),
-    'Andromeda\\' => array($baseDir . '/app'),
+    'App\\' => array($baseDir . '/src'),
 );

@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '31d2e57255ddf0f5211b7a69581d353b61794376',
+        'reference' => '7ce7c535d6d115f95e6eeb7a1e691d06aa9c1530',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '31d2e57255ddf0f5211b7a69581d353b61794376',
+            'reference' => '7ce7c535d6d115f95e6eeb7a1e691d06aa9c1530',
             'dev_requirement' => false,
         ),
         'opis/database' => array(
