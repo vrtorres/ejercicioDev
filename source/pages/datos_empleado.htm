@@ -1,7 +1,7 @@
 <div class="alert alert-info" role="alert">
   <p class="text-center"><strong>CREAR EMPLEADO NUEVO</p>
 </div>
-<div ng-controller="info_empleado">
+
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="datos-personales" data-bs-toggle="tab" data-bs-target="#personal-data" type="button" role="tab" aria-controls="home" aria-selected="true">Datos Personales</button>
@@ -16,16 +16,18 @@
     <div class="tab-pane fade show active" id="personal-data" role="tabpanel" aria-labelledby="datos-personales">
       <div class="row mt-3">
         <div class="col-md-6 mb-3">
-          <label for="n1" class="form-label">Nombres</label>
-          <input type="text" class="form-control" ng-model="employer.name" placeholder="nombre">
+          <label for="nombre" class="form-label">Nombres</label>
+          <input type="text" class="form-control" ng-model="employer.name" placeholder="nombre" id="nombre" required>
+          <div id="nombreFeedback" class="invalid-feedback">Nombre debe ser provisto</div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Apellidos</label>
           <input type="text" class="form-control" ng-model="employer.lastname" placeholder="apellidos">
         </div>
         <div class="col-md-6 mb-3">
-          <label for="n1" class="form-label">Cédula: (Válida)</label>
-          <input type="text" class="form-control" ng-model="employer.idn" placeholder="1209372901">
+          <label for="cedula" class="form-label">Cédula: (Válida)</label>
+          <input type="text" class="form-control" ng-model="employer.idn" placeholder="1209372901" minlength="10" maxlength="10" id="cedula" required>
+          <div id="cedulaFeedback" class="invalid-feedback">Cedula debe ser válida</div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Provincia</label>
@@ -39,7 +41,8 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Email (Valida)</label>
-          <input type="mail" class="form-control" ng-model="employer.mail">
+          <input type="email" class="form-control" ng-model="employer.mail" id="email" required>
+          <div id="emailFeedback" class="invalid-feedback">Debe ser un correo válido</div>
         </div>
         <div class="col-md-12 mb-3">
           <label for="n1" class="form-label">Observaciones</label><br>
@@ -56,7 +59,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Cargo</label>
-          <input type="text" class="form-control" ng-model="job.place" placeholder="cargo">
+          <input type="text" class="form-control" ng-model="job.position" placeholder="cargo">
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Departamento</label>
@@ -64,7 +67,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Provincia</label>
-          <select name="provincia" ng-model="job.province" class="form-select">
+          <select name="provincia" ng-model="job.provinceJob" class="form-select">
             <option ng-repeat="province in provincias" value="{{province.nombre_provincia}}">{{province.nombre_provincia}}</option>
           </select>
         </div>
@@ -75,24 +78,23 @@
         <div class="col-md-6 mb-3">
           <label for="n1" class="form-label">Jornada Parcial</label>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="parcial" ng-model="job.partial_y" value="yes">
+            <input class="form-check-input" type="radio" name="parcial" ng-model="job.partial" value="yes">
             <label class="form-check-label" for="jp_yes">Sí</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="parcial" ng-model="job.partial_n" value="no">
+            <input class="form-check-input" type="radio" name="parcial" ng-model="job.partial" value="no">
             <label class="form-check-label" for="jp_no">No</label>
           </div>
         </div>
         <div class="col-md-12 mb-3">
           <label for="n1" class="form-label">Observaciones</label><br>
-          <textarea name="observaciones" ng-model="job.obsv" rows="8" cols="80"></textarea>
+          <textarea name="observaciones" ng-model="job.obsvjob" rows="8" cols="80"></textarea>
         </div>
       </div>
     </div>
   </div>
   <div class="col-md-12">
-    <button type="button" class="btn btn-success" ng-click="submitData()">Contsinuar</button>
-    <button type="button" class="btn btn-warning">Reporte</button>
-    <button type="button" class="btn btn-danger">Salir</button>
+    <button type="button" class="btn btn-success" ng-click="submitData()">Continuar</button>
+    <a class="btn btn-warning" href="#!reporte" target="_blank" >Reporte</a>
+    <a class="btn btn-danger" href="/ejercicioDev">Salir</a>
   </div>
-</div>

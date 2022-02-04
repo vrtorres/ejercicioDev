@@ -2,23 +2,40 @@
   <p class="text-center"><strong>REPORTE DE EMPLEADOS</p>
 </div>
 
-<table class="table table-striped">
+<table class="table table-striped" ng-controller="lista_empleados" id="tabla1">
   <thead class="bg-success text-white">
     <tr>
       <th>Nombre</th>
-      <th>Código</th>
-      <th>Estado</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Provincia Origen</th>
+      <th>Fecha Nacimiento</th>
+      <th>Email</th>
+      <th>Observaciones</th>
+      <th>Fecha Ingreso</th>
+      <th>Cargo Empleado</th>
+      <th>Departamento Empleado</th>
+      <th>Provincia Trabajo</th>
+      <th>Sueldo</th>
+      <th>Jornada</th>
+      <th>Observacion Laboral</th>
     </tr>
-    <tbody>
-      <tr>
-        <td>Juan topo</td>
-        <td>23131</td>
-        <td>libre</td>
-      </tr>
-      <tr>
-        <td>Ramon roman</td>
-        <td><a href="#!datos_emp">90898</a></td>
-        <td>libre</td>
+    <tbody style="font-weight:normal;font-size:0.8em">
+      <tr ng-repeat="empleado in empleados">
+        <td>{{empleado.nombre_empleado}}</td>
+        <td>{{empleado.apellido_empleado}}</td>
+        <td>{{empleado.cedula_empleado}}</td>
+        <td>{{empleado.provincia_empleado}}</td>
+        <td>{{empleado.fecha_nacimiento}}</td>
+        <td>{{empleado.email_empleado}}</td>
+        <td>{{empleado.observaciones_empleado}}</td>
+        <td>{{empleado.fecha_ingreso}}</td>
+        <td>{{empleado.cargo_empleado}}</td>
+        <td>{{empleado.departamento_empleado}}</td>
+        <td>{{empleado.provincia_labora}}</td>
+        <td>{{empleado.sueldo_empleado}}</td>
+        <td>{{empleado.estado}}</td>
+        <td>{{empleado.observaciones_laborales}}</td>
       </tr>
     </tbody>
   </thead>

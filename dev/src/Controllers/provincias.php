@@ -14,10 +14,6 @@ switch ($requirement->task) {
     $resp = $prov->get_Provincias();
     echo json_encode($resp);
   break;
-
-  default:
-    // code...
-    break;
 }
 
  ?>

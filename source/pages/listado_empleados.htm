@@ -17,23 +17,20 @@
   </div>
 </div>
 <div class="row mt-4 mb-3">
-  <table class="table table-striped">
+  <table class="table table-striped" ng-controller="lista_empleados">
     <thead class="bg-success text-white">
       <tr>
         <th>Nombre</th>
         <th>Código</th>
         <th>Estado</th>
+        <th>Accion</th>
       </tr>
       <tbody>
-        <tr>
-          <td>Juan topo</td>
-          <td>23131</td>
-          <td>libre</td>
-        </tr>
-        <tr>
-          <td>Ramon roman</td>
-          <td><a href="#!datos_emp">90898</a></td>
-          <td>libre</td>
+        <tr ng-repeat = "empleado in empleados">
+          <td>{{empleado.apellido_empleado}} {{empleado.nombre_empleado}}</td>
+          <td>{{empleado.id}}</td>
+          <td>{{empleado.estado}}</td>
+          <td><a href="#!datos/{{empleado.id}}" class="btn btn-success">Modificar</a></td>
         </tr>
       </tbody>
     </thead>
@@ -41,12 +38,12 @@
 </div>
 <div class="row mt-3">
   <div class="col-sm-4">
-    <button type="button" class="btn btn-warning">Crear</button>
+    <a class="btn btn-warning" href="#!datos_emp">Crear</a>
   </div>
   <div class="col-sm-4">
-    <button type="button" class="btn btn-success">Reporte</button>
+    <a class="btn btn-success" href="#!reporte" target="_blank">Reporte</a>
   </div>
   <div class="col-sm-4">
-    <button type="button" class="btn btn-danger">Salir</button>
+    <a class="btn btn-danger" href="/ejercicioDev">Salir</a>
   </div>
 </div>
